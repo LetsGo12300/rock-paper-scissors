@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function(){
     let tally = [0, 0]; // [player tally, computer tally]
 
-    for (let i = 0; i < 5; i++){
-        game(tally);
-    }
-    console.log(tally);
-});
+    document.querySelectorAll(".btn").forEach(item => {
+        item.addEventListener("click",()=>{
+            let player = item.id;
+            let computer = computerPlay();
+            let gameResult = playRound(player,computer);
+            tally[0]+=gameResult[0]; //update player tally
+            tally[1]+=gameResult[1]; //update computer tally
 
-function game(currentTally){
-    let player = prompt("Please enter player choice:");
-    let computer = computerPlay();
-    let gameResult = playRound(player,computer);
-    currentTally[0]+=gameResult[0]; //update player tally
-    currentTally[1]+=gameResult[1]; //update computer tally
-    console.log(gameResult[2]);
-}
+            document.getElementById('player-count').innerHTML = tally[0];
+            document.getElementById('computer-count').innerHTML = tally[1];
+            document.getElementById('result').innerHTML = gameResult[2];
+        });
+    });
+});
 
 function computerPlay(){
     let choices = ['rock', 'paper', 'scissors'];

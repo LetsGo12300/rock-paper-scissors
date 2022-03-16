@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#tally{
+    display: flex;
+    font-size: 100px;
+}
+
+.header{
+    font-size: 20px;
+    background-color: yellow;
+    padding: 5px 50px;
+    margin-bottom: 5px;
+}
+
+.btn{
+    margin: 0px 5px;
+}
+
+#result{
+    height: 50px;
+    font-size: 40px;
+    margin-top: 15px;
+}
