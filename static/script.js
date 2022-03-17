@@ -106,4 +106,5 @@ function resetScore(){
     document.getElementById('result').textContent ='';
     resetButtons();
     enableButtons();
+    document.getElementById('result').className = '';
 }
