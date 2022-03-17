@@ -9,7 +9,7 @@ body{
 
 #tally{
     display: flex;
-    font-size: 100px;
+    font-size: 150px;
 }
 
 .header{
@@ -20,7 +20,7 @@ body{
 }
 
 .btn{
-    margin: 0px 5px;
+    margin: 0px 2px;
 }
 
 #result{
@@ -37,4 +37,28 @@ body{
 .loser{
     color: red;
     font-weight: bolder;
+}
+
+.button-container{
+    display: flex;
+}
+
+.button-container>div{
+    margin: 5px 20px;
+}
+
+.header-btn{
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+#try-again{
+    margin-top:30px;
+    font-size: 25px;
+    color: gray;
+    visibility:hidden;
+}
+
+#try-again:hover{
+    color: black;
 }

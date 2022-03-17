@@ -10,8 +10,8 @@
     <script src="./static/script.js"></script>
 </head>
 <body>
-    <h2>Tally</h2>
-    <div class="header">Player - Computer</div>
+    <h2>Rock-Paper-Scissors (Best of 5)</h2>
+    <div class="header">Player versus Computer</div>
     
     <div id="tally">
         <div id="player-count">0</div>
@@ -20,12 +20,23 @@
     </div>
 
     <div class="button-container">
-        <button id="rock" class="btn btn-primary btn-lg">Rock</button>
-        <button id="paper" class="btn btn-primary btn-lg">Paper</button>
-        <button id="scissors" class="btn btn-primary btn-lg">Scissors</button>
+        <div class="player-buttons">
+            <div class="header-btn">Player</div>
+            <button id="rock-p" class="btn btn-primary btn-lg btn-plr">Rock</button>
+            <button id="paper-p" class="btn btn-primary btn-lg btn-plr">Paper</button>
+            <button id="scissors-p" class="btn btn-primary btn-lg btn-plr">Scissors</button>
+        </div>
+        <div class="computer-buttons">
+            <div class="header-btn">Computer</div>
+            <button id="rock-c" class="btn btn-secondary btn-lg btn-comp" disabled>Rock</button>
+            <button id="paper-c" class="btn btn-secondary btn-lg btn-comp" disabled>Paper</button>
+            <button id="scissors-c" class="btn btn-secondary btn-lg btn-comp" disabled>Scissors</button>
+        </div>
+        
     </div>
 
     <div id="result"></div>
+    <button id="try-again" class="btn btn-light">Play again?</button>
     
 </body>
 </html>
