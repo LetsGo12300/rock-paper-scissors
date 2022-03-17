@@ -28,3 +28,13 @@ body{
     font-size: 40px;
     margin-top: 15px;
 }
+
+.winner{
+    color: green;
+    font-weight: bolder;
+}
+
+.loser{
+    color: red;
+    font-weight: bolder;
+}

@@ -9,9 +9,19 @@ document.addEventListener('DOMContentLoaded', function(){
             tally[0]+=gameResult[0]; //update player tally
             tally[1]+=gameResult[1]; //update computer tally
 
-            document.getElementById('player-count').innerHTML = tally[0];
-            document.getElementById('computer-count').innerHTML = tally[1];
-            document.getElementById('result').innerHTML = gameResult[2];
+            document.getElementById('player-count').textContent = tally[0];
+            document.getElementById('computer-count').textContent = tally[1];
+            document.getElementById('result').textContent = gameResult[2];
+
+            if (tally[0]===5){ // Player wins
+                document.getElementById('result').textContent = 'You win! Player wins.';
+                document.getElementById('result').className = 'winner';
+            }
+
+            if (tally[1]===5){ // Player wins
+                document.getElementById('result').textContent = 'You lose! Computer wins.';
+                document.getElementById('result').className = 'loser';
+            }
         });
     });
 });
